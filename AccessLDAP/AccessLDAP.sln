@@ -1,0 +1,82 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccessLDAP", "AccessLDAP\AccessLDAP.csproj", "{FFA7FE00-52ED-4D7C-A554-C15905AE4ECC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9A794DA3-DB63-404B-965E-616598F95E64} = {9A794DA3-DB63-404B-965E-616598F95E64}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfServiceLDAP", "WcfServiceLDAP\WcfServiceLDAP.csproj", "{9A794DA3-DB63-404B-965E-616598F95E64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccessLDAP.Common", "AccessLDAP.Common\AccessLDAP.Common.csproj", "{90F6B17B-0D4C-4AA5-96BB-383C87EF0663}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccessLDAP.DAL", "AccessLDAP.DAL\AccessLDAP.DAL.csproj", "{540E8AA1-DE5E-4FAD-86B5-D679D29ACDFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccessLDAP.BL", "AccessLDAP.BL\AccessLDAP.BL.csproj", "{21FE2672-9D94-4C02-BB6F-922EBD66DABC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfServiceLDAP.Test", "WcfServiceLDAP.Test\WcfServiceLDAP.Test.csproj", "{3ADEE932-0D27-40F0-BD3D-C765385EA7E8}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9A794DA3-DB63-404B-965E-616598F95E64} = {9A794DA3-DB63-404B-965E-616598F95E64}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FFA7FE00-52ED-4D7C-A554-C15905AE4ECC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFA7FE00-52ED-4D7C-A554-C15905AE4ECC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFA7FE00-52ED-4D7C-A554-C15905AE4ECC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFA7FE00-52ED-4D7C-A554-C15905AE4ECC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A794DA3-DB63-404B-965E-616598F95E64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A794DA3-DB63-404B-965E-616598F95E64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A794DA3-DB63-404B-965E-616598F95E64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A794DA3-DB63-404B-965E-616598F95E64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90F6B17B-0D4C-4AA5-96BB-383C87EF0663}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90F6B17B-0D4C-4AA5-96BB-383C87EF0663}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90F6B17B-0D4C-4AA5-96BB-383C87EF0663}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90F6B17B-0D4C-4AA5-96BB-383C87EF0663}.Release|Any CPU.Build.0 = Release|Any CPU
+		{540E8AA1-DE5E-4FAD-86B5-D679D29ACDFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{540E8AA1-DE5E-4FAD-86B5-D679D29ACDFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{540E8AA1-DE5E-4FAD-86B5-D679D29ACDFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{540E8AA1-DE5E-4FAD-86B5-D679D29ACDFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21FE2672-9D94-4C02-BB6F-922EBD66DABC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21FE2672-9D94-4C02-BB6F-922EBD66DABC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21FE2672-9D94-4C02-BB6F-922EBD66DABC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21FE2672-9D94-4C02-BB6F-922EBD66DABC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3ADEE932-0D27-40F0-BD3D-C765385EA7E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3ADEE932-0D27-40F0-BD3D-C765385EA7E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3ADEE932-0D27-40F0-BD3D-C765385EA7E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3ADEE932-0D27-40F0-BD3D-C765385EA7E8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://rogerhosting.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = AccessLDAP.Common\\AccessLDAP.Common.csproj
+		SccProjectName1 = AccessLDAP.Common
+		SccLocalPath1 = AccessLDAP.Common
+		SccProjectUniqueName2 = AccessLDAP.DAL\\AccessLDAP.DAL.csproj
+		SccProjectName2 = AccessLDAP.DAL
+		SccLocalPath2 = AccessLDAP.DAL
+		SccProjectUniqueName3 = AccessLDAP\\AccessLDAP.csproj
+		SccProjectName3 = AccessLDAP
+		SccLocalPath3 = AccessLDAP
+		SccProjectUniqueName4 = WcfServiceLDAP\\WcfServiceLDAP.csproj
+		SccProjectName4 = WcfServiceLDAP
+		SccLocalPath4 = WcfServiceLDAP
+		SccProjectUniqueName5 = AccessLDAP.BL\\AccessLDAP.BL.csproj
+		SccProjectName5 = AccessLDAP.BL
+		SccLocalPath5 = AccessLDAP.BL
+		SccProjectUniqueName6 = WcfServiceLDAP.Test\\WcfServiceLDAP.Test.csproj
+		SccProjectName6 = WcfServiceLDAP.Test
+		SccLocalPath6 = WcfServiceLDAP.Test
+	EndGlobalSection
+EndGlobal

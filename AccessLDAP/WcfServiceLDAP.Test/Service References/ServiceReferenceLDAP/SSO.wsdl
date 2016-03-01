@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SSO" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:3981/SSO.svc?xsd=xsd3" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:3981/SSO.svc?xsd=xsd1" namespace="http://schemas.datacontract.org/2004/07/AccessLDAP.Common" />
+      <xsd:import schemaLocation="http://localhost:3981/SSO.svc?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:3981/SSO.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISSO_CreateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateUser" />
+  </wsdl:message>
+  <wsdl:message name="ISSO_CreateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISSO_CreateUser_SSOUserAlreadyExistsExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/AccessLDAP.Common" name="detail" element="q1:SSOUserAlreadyExistsException" />
+  </wsdl:message>
+  <wsdl:message name="ISSO_DeleteUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUser" />
+  </wsdl:message>
+  <wsdl:message name="ISSO_DeleteUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISSO_UserExists_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserExists" />
+  </wsdl:message>
+  <wsdl:message name="ISSO_UserExists_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISSO_ChangePassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangePassword" />
+  </wsdl:message>
+  <wsdl:message name="ISSO_ChangePassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangePasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISSO_GetUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsers" />
+  </wsdl:message>
+  <wsdl:message name="ISSO_GetUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISSO_GetAllUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllUsers" />
+  </wsdl:message>
+  <wsdl:message name="ISSO_GetAllUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISSO_GetUserByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByName" />
+  </wsdl:message>
+  <wsdl:message name="ISSO_GetUserByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISSO_GetUserByName_SSOUserDoesNotExistExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/AccessLDAP.Common" name="detail" element="q2:SSOUserDoesNotExistException" />
+  </wsdl:message>
+  <wsdl:message name="ISSO_GetUserByEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByEmail" />
+  </wsdl:message>
+  <wsdl:message name="ISSO_GetUserByEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISSO_GetUserByEmail_SSOUserDoesNotExistExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/AccessLDAP.Common" name="detail" element="q3:SSOUserDoesNotExistException" />
+  </wsdl:message>
+  <wsdl:message name="ISSO_GetUserByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByID" />
+  </wsdl:message>
+  <wsdl:message name="ISSO_GetUserByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISSO_FindUsersByEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindUsersByEmail" />
+  </wsdl:message>
+  <wsdl:message name="ISSO_FindUsersByEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindUsersByEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISSO_FindUsersByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindUsersByName" />
+  </wsdl:message>
+  <wsdl:message name="ISSO_FindUsersByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindUsersByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISSO_SignIn_InputMessage">
+    <wsdl:part name="parameters" element="tns:SignIn" />
+  </wsdl:message>
+  <wsdl:message name="ISSO_SignIn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SignInResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISSO_SignIn_SSOInvalidPasswordExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/AccessLDAP.Common" name="detail" element="q4:SSOInvalidPasswordException" />
+  </wsdl:message>
+  <wsdl:message name="ISSO_SignIn_SSOUserDoesNotExistExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/AccessLDAP.Common" name="detail" element="q5:SSOUserDoesNotExistException" />
+  </wsdl:message>
+  <wsdl:message name="ISSO_SignOut_InputMessage">
+    <wsdl:part name="parameters" element="tns:SignOut" />
+  </wsdl:message>
+  <wsdl:message name="ISSO_SignOut_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SignOutResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISSO_IsAuthenticated_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsAuthenticated" />
+  </wsdl:message>
+  <wsdl:message name="ISSO_IsAuthenticated_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsAuthenticatedResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISSO_ResetPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResetPassword" />
+  </wsdl:message>
+  <wsdl:message name="ISSO_ResetPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResetPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISSO_GetOnlineCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOnlineCount" />
+  </wsdl:message>
+  <wsdl:message name="ISSO_GetOnlineCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOnlineCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISSO_UpdateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUser" />
+  </wsdl:message>
+  <wsdl:message name="ISSO_UpdateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISSO">
+    <wsdl:operation name="CreateUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISSO/CreateUser" message="tns:ISSO_CreateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISSO/CreateUserResponse" message="tns:ISSO_CreateUser_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISSO/CreateUserSSOUserAlreadyExistsExceptionFault" name="SSOUserAlreadyExistsExceptionFault" message="tns:ISSO_CreateUser_SSOUserAlreadyExistsExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISSO/DeleteUser" message="tns:ISSO_DeleteUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISSO/DeleteUserResponse" message="tns:ISSO_DeleteUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserExists">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISSO/UserExists" message="tns:ISSO_UserExists_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISSO/UserExistsResponse" message="tns:ISSO_UserExists_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISSO/ChangePassword" message="tns:ISSO_ChangePassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISSO/ChangePasswordResponse" message="tns:ISSO_ChangePassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISSO/GetUsers" message="tns:ISSO_GetUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISSO/GetUsersResponse" message="tns:ISSO_GetUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISSO/GetAllUsers" message="tns:ISSO_GetAllUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISSO/GetAllUsersResponse" message="tns:ISSO_GetAllUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByName">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISSO/GetUserByName" message="tns:ISSO_GetUserByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISSO/GetUserByNameResponse" message="tns:ISSO_GetUserByName_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISSO/GetUserByNameSSOUserDoesNotExistExceptionFault" name="SSOUserDoesNotExistExceptionFault" message="tns:ISSO_GetUserByName_SSOUserDoesNotExistExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISSO/GetUserByEmail" message="tns:ISSO_GetUserByEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISSO/GetUserByEmailResponse" message="tns:ISSO_GetUserByEmail_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISSO/GetUserByEmailSSOUserDoesNotExistExceptionFault" name="SSOUserDoesNotExistExceptionFault" message="tns:ISSO_GetUserByEmail_SSOUserDoesNotExistExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISSO/GetUserByID" message="tns:ISSO_GetUserByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISSO/GetUserByIDResponse" message="tns:ISSO_GetUserByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindUsersByEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISSO/FindUsersByEmail" message="tns:ISSO_FindUsersByEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISSO/FindUsersByEmailResponse" message="tns:ISSO_FindUsersByEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindUsersByName">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISSO/FindUsersByName" message="tns:ISSO_FindUsersByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISSO/FindUsersByNameResponse" message="tns:ISSO_FindUsersByName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SignIn">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISSO/SignIn" message="tns:ISSO_SignIn_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISSO/SignInResponse" message="tns:ISSO_SignIn_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISSO/SignInSSOInvalidPasswordExceptionFault" name="SSOInvalidPasswordExceptionFault" message="tns:ISSO_SignIn_SSOInvalidPasswordExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISSO/SignInSSOUserDoesNotExistExceptionFault" name="SSOUserDoesNotExistExceptionFault" message="tns:ISSO_SignIn_SSOUserDoesNotExistExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SignOut">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISSO/SignOut" message="tns:ISSO_SignOut_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISSO/SignOutResponse" message="tns:ISSO_SignOut_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsAuthenticated">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISSO/IsAuthenticated" message="tns:ISSO_IsAuthenticated_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISSO/IsAuthenticatedResponse" message="tns:ISSO_IsAuthenticated_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResetPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISSO/ResetPassword" message="tns:ISSO_ResetPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISSO/ResetPasswordResponse" message="tns:ISSO_ResetPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOnlineCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISSO/GetOnlineCount" message="tns:ISSO_GetOnlineCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISSO/GetOnlineCountResponse" message="tns:ISSO_GetOnlineCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISSO/UpdateUser" message="tns:ISSO_UpdateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISSO/UpdateUserResponse" message="tns:ISSO_UpdateUser_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ISSO" type="tns:ISSO">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateUser">
+      <soap:operation soapAction="http://tempuri.org/ISSO/CreateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SSOUserAlreadyExistsExceptionFault">
+        <soap:fault use="literal" name="SSOUserAlreadyExistsExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <soap:operation soapAction="http://tempuri.org/ISSO/DeleteUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserExists">
+      <soap:operation soapAction="http://tempuri.org/ISSO/UserExists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <soap:operation soapAction="http://tempuri.org/ISSO/ChangePassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <soap:operation soapAction="http://tempuri.org/ISSO/GetUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUsers">
+      <soap:operation soapAction="http://tempuri.org/ISSO/GetAllUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByName">
+      <soap:operation soapAction="http://tempuri.org/ISSO/GetUserByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SSOUserDoesNotExistExceptionFault">
+        <soap:fault use="literal" name="SSOUserDoesNotExistExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByEmail">
+      <soap:operation soapAction="http://tempuri.org/ISSO/GetUserByEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SSOUserDoesNotExistExceptionFault">
+        <soap:fault use="literal" name="SSOUserDoesNotExistExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByID">
+      <soap:operation soapAction="http://tempuri.org/ISSO/GetUserByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindUsersByEmail">
+      <soap:operation soapAction="http://tempuri.org/ISSO/FindUsersByEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindUsersByName">
+      <soap:operation soapAction="http://tempuri.org/ISSO/FindUsersByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SignIn">
+      <soap:operation soapAction="http://tempuri.org/ISSO/SignIn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SSOInvalidPasswordExceptionFault">
+        <soap:fault use="literal" name="SSOInvalidPasswordExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="SSOUserDoesNotExistExceptionFault">
+        <soap:fault use="literal" name="SSOUserDoesNotExistExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SignOut">
+      <soap:operation soapAction="http://tempuri.org/ISSO/SignOut" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsAuthenticated">
+      <soap:operation soapAction="http://tempuri.org/ISSO/IsAuthenticated" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResetPassword">
+      <soap:operation soapAction="http://tempuri.org/ISSO/ResetPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOnlineCount">
+      <soap:operation soapAction="http://tempuri.org/ISSO/GetOnlineCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <soap:operation soapAction="http://tempuri.org/ISSO/UpdateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SSO">
+    <wsdl:port name="BasicHttpBinding_ISSO" binding="tns:BasicHttpBinding_ISSO">
+      <soap:address location="http://localhost:3981/SSO.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

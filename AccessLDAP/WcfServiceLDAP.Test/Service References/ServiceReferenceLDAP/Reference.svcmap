@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9fdea6bc-e87a-4ead-962f-fdbee47b3ba2" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:3981/SSO.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SSO.xsd" MetadataType="Schema" ID="de857977-5ffa-4cda-8d86-bdbda57bc90e" SourceId="1" SourceUrl="http://localhost:3981/SSO.svc?xsd=xsd3" />
+    <MetadataFile FileName="SSO1.xsd" MetadataType="Schema" ID="3e51cf1a-4640-47b7-b5e9-6838e978d1c7" SourceId="1" SourceUrl="http://localhost:3981/SSO.svc?xsd=xsd2" />
+    <MetadataFile FileName="SSO2.xsd" MetadataType="Schema" ID="69fc3ed6-df04-4ed1-b5ac-fcae3bb47588" SourceId="1" SourceUrl="http://localhost:3981/SSO.svc?xsd=xsd1" />
+    <MetadataFile FileName="SSO3.xsd" MetadataType="Schema" ID="057117b3-aaea-4b22-9d2c-8c7916b94bc8" SourceId="1" SourceUrl="http://localhost:3981/SSO.svc?xsd=xsd0" />
+    <MetadataFile FileName="SSO.wsdl" MetadataType="Wsdl" ID="a6236032-57bf-456e-a08a-a662747eb11f" SourceId="1" SourceUrl="http://localhost:3981/SSO.svc?wsdl" />
+    <MetadataFile FileName="SSO.disco" MetadataType="Disco" ID="ecfb9e0e-d361-462b-980b-59b203208683" SourceId="1" SourceUrl="http://localhost:3981/SSO.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
